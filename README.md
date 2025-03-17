@@ -26,6 +26,7 @@ cd simple-data-management
 
 ```bash
 pip install Flask requests
+pip install pandas
 ```
 
 ---
