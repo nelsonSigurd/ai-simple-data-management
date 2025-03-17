@@ -71,6 +71,43 @@ body {
     right: 10px;
 }
 
+.card-buttons .btn-warning {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card-buttons .btn-warning:hover {
+    background-color: rgba(255, 193, 7, 0.08);
+    border: 1px solid rgba(255, 193, 7, 0.15);
+    box-shadow: 0 0 4px rgba(255, 193, 7, 0.25);
+}
+
+.card-buttons .btn-danger {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card-buttons .btn-danger:hover {
+    background-color: rgba(220, 53, 69, 0.08);
+    border: 1px solid rgba(220, 53, 69, 0.15);
+    box-shadow: 0 0 4px rgba(220, 53, 69, 0.25);
+}
+
+/* Icon Effects */
+
+/* Set both icons to white initially */
+.card-buttons .btn-warning i,
+.card-buttons .btn-danger i {
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+/* On hover → turn icons black */
+.card-buttons .btn-warning:hover i,
+.card-buttons .btn-danger:hover i {
+    color: #000;
+}
+
 .btn-primary {
     background-color: #0a9396;
     border-color: #0a9396;
@@ -233,6 +270,7 @@ button[disabled] {
 
 .left-btn:hover, .right-btn:hover {
     transform: scale(1.02);
+    color: #fff;
 }
 
 .left-btn span, .right-btn span {
@@ -242,9 +280,4 @@ button[disabled] {
 
 .left-btn {
     border-right: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Optional: Keep this for other buttons elsewhere */
-.btn {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
