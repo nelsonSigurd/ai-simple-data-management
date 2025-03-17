@@ -6,30 +6,52 @@ body {
 }
 
 .navbar {
-    background-color: #005f73;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(90deg, #003f5c, #58508d);
+    padding: 15px 20px;
+    border-bottom: 4px solid #bc5090;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-brand {
     font-weight: 700;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
 .navbar-brand:hover {
-    color: #94d2bd;
+    color: #ffa600;
 }
 
 .navbar a {
     color: #ffffff;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
 }
 
 .navbar a:hover {
-    color: #94d2bd;
+    color: #ffa600;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffa600;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .card {
@@ -129,4 +151,100 @@ button[disabled] {
 /* Styling feedback for drag and drop */
 .col-md-4.dragging {
     opacity: 0.5;
+}
+
+/* Gradient Button Style */
+.btn-custom-gradient {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background: linear-gradient(90deg, #003f5c, #58508d);
+    color: #ffffff;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn-custom-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #bc5090, #ffa600);
+    opacity: 0;
+    transition: opacity .75s ease-in-out;
+    z-index: 1;
+}
+
+.btn-custom-gradient:hover::before {
+    opacity: 1;
+}
+
+.btn-custom-gradient:hover {
+    transform: scale(1.02);
+}
+
+.btn-custom-gradient span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Buttons Shared Gradient Group */
+.button-group {
+    display: flex;
+    width: 400px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.left-btn, .right-btn {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(to right, #003f5c 0%, #58508d 100%);
+    border: none;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-btn::before, .right-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #bc5090, #ffa600);
+    opacity: 0;
+    transition: opacity .75s ease-in-out;
+    z-index: 1;
+}
+
+.left-btn:hover::before, .right-btn:hover::before {
+    opacity: 1;
+}
+
+.left-btn:hover, .right-btn:hover {
+    transform: scale(1.02);
+}
+
+.left-btn span, .right-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.left-btn {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Optional: Keep this for other buttons elsewhere */
+.btn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
