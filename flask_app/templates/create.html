@@ -1,22 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-    <h2 class="mb-4 text-center">Add a New Record</h2>
-    <div class="form-container">
-        <form id="create-form" method="POST" action="/create">
-            <small class="text-muted d-block mb-3">* All fields are required</small>
-            <div class="mb-3">
-                <label for="create_first_name" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="create_first_name" name="first_name" required>
-            </div>
-            <div class="mb-3">
-                <label for="create_last_name" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="create_last_name" name="last_name" required>
-            </div>
-            <div class="mb-3">
-                <label for="create_date_of_birth" class="form-label">Date of Birth</label>
-                <input type="date" class="form-control" id="create_date_of_birth" name="date_of_birth" required>
-            </div>
-            <button type="submit" id="create-submit-btn" class="btn btn-primary w-100 btn-custom-gradient" disabled><span>Submit</span></button>
-        </form>
-    </div>
-{% endblock %}
+<h2 class="mb-4 text-center">Add a New Record</h2>
+<div class="form-container">
+    <form id="create-form" method="POST" action="/create">
+        <small class="text-muted d-block mb-3">* All fields are required</small>
+        <div class="mb-3">
+            <label for="create_first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="create_first_name" name="first_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="create_last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="create_last_name" name="last_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="create_date_of_birth" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="create_date_of_birth" name="date_of_birth" required>
+        </div>
+        <button type="submit" id="create-submit-btn" class="btn btn-primary w-100 btn-custom-gradient" disabled>
+            <span>Submit</span>
+        </button>
+    </form>
+</div>
